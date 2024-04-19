@@ -1,0 +1,23 @@
+.header {
+    height: 130px;
+    background-color: black;
+    border-bottom: solid 3px whitesmoke;
+    color: whitesmoke;
+    font-size: 28px;
+}
+
+.header > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 50px 0 50px;
+}
+
+.header > div > div {
+    display: flex;
+}
+.header > div > div > p:first-child {
+        margin-right: 80px;
+}
+

@@ -1,0 +1,200 @@
+.login\/register {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login\/register > div {
+    display: flex;
+    width: 350px;
+    height: 500px;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.cardMiddle {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.cardMiddle > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 420px;
+    width: 100%;
+    border: 3px darkblue solid;
+    font-size: 18px;
+}
+
+/*/ Form Design /*/
+
+.topCardForm > p:last-child, .bottomCardForm > div > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    border: solid mediumblue 3px;
+    border-radius: 3px;
+    font-size: 24px;
+    color: black;
+}
+
+.topCardForm {
+    display: flex;
+    align-items: center;
+}
+
+.topCardForm > p:first-child {
+    font-size: 76px;
+    font-family: blackjack, sans-serif;
+    margin-left: -5px;
+    margin-top: -10px;
+}
+
+.topCardForm > p:last-child {
+    margin-left: 25px;
+}
+
+/*/ Middle of the Form /*/
+
+#middleCardForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#middleCardForm > div {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+
+}
+
+.middleCardFormLogin > div {
+    margin: 10px;
+}
+
+.middleCardFormRegister > div {
+    margin: 4px;
+}
+
+#middleCardForm > div:nth-child(1) {
+    background-color: red;
+    border: solid black 3px;
+    border-radius: 3px;
+    color: white;
+    padding: 5px;
+}
+
+.thirdChildRegister {
+    background-color: red;
+    border: solid black 3px;
+    border-radius: 3px;
+    color: white;
+    padding: 5px;
+}
+
+#middleCardForm > div > input {
+    border: 3px solid black;
+}
+
+#middleCardForm > div > button {
+    height: 30px;
+    font-family: mainstyle, sans-serif;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.loginConfirm {
+    background-color: red;
+    border: solid black 3px;
+    border-radius: 3px;
+    color: white;
+}
+
+.middleCardFormLogin > div:nth-child(2) {
+    background-color: mediumblue;
+    border: solid black 3px;
+    border-radius: 3px;
+    color: white;
+    padding: 5px;
+}
+
+.registerConfirm, .middleCardFormRegister > div:nth-child(2) {
+    background-color: #ffcf00;
+    color: black;
+    border: solid black 3px;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+/*/ Middle of the Form /*/
+
+.bottomCardForm > p {
+    display: flex;
+    justify-content: center;
+}
+
+.bottomCardForm > div {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.bottomCardForm > div > a {
+    margin-right: 25px;
+}
+
+.bottomCardForm > div > p {
+    font-size: 76px;
+    font-family: blackjack, sans-serif;
+    transform: rotate(180deg);
+    margin-right: -5px;
+    margin-bottom: -10px;
+}
+
+.bottomCardForm > div > a {
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/*/ Form Design /*/
+
+/*/ Faces and Letters /*/
+
+#cardCorner1, #cardCorner2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: blackjack, sans-serif;
+    margin: 10px 0 0 10px;
+}
+
+#cardCorner2 {
+    align-self: flex-end;
+    transform: rotate(180deg);
+    margin: 0 10px 10px 0;
+}
+
+#letters {
+    display: flex;
+    justify-content: center;
+    width: 38px;
+    font-size: 48px;
+}
+
+#faces {
+    font-size: 36px;
+}
+
+.registerCardColor {
+    color: red;
+}
+
+/*/ Faces and Letters /*/
