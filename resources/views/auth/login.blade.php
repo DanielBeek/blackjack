@@ -19,11 +19,17 @@
                     <div id="middleCardForm" class="middleCardFormLogin">
                         <div>
                             <label for="email">E-mail</label>
-                            <input type="text" name="mail" id="email" placeholder="Blackjack@gmail.com">
+                            <input type="text" name="email" id="email" placeholder="Blackjack@gmail.com">
+                            @error('email')
+                            {{$message}}
+                            @enderror
                         </div>
                         <div>
                             <label for="password">Password</label>
                             <input type="password" name="password" id="password" placeholder="Blackjack123">
+                            @error('password')
+                            {{$message}}
+                            @enderror
                         </div>
                         <div>
                             <button class="loginConfirm"  type="submit">Submit</button>

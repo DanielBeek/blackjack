@@ -17,7 +17,21 @@
 .header > div > div {
     display: flex;
 }
+
 .header > div > div > p:first-child {
-        margin-right: 80px;
+    margin-right: 80px;
+    display: flex;
+    align-items: center;
 }
 
+/*/ Dropdown Menu /*/
+
+.dropdown-menu > img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.nav {
+    display: none;
+}
