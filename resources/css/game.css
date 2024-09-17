@@ -1,0 +1,26 @@
+.main > div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.dealer, .player {
+    width: 400px;
+    height: 250px;
+}
+
+.player-buttons {
+    width: 400px;
+}
+/*/coole kleur voor input als ie beschikbaar is (#540808) /*/
+.player-buttons > input {
+    width: 180px;
+    height: 80px;
+    border: solid 3px whitesmoke;
+    color: whitesmoke;
+    background-color: #292626;
+    margin: 6px;
+    cursor: pointer;
+    font-family: mainstyle, sans-serif;
+    font-size: 18px;
+}

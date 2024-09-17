@@ -1,24 +1,30 @@
-import deckofcards from "./deckofcards.js";
-
 class InitialDeal {
 
-    dealer = []
-    player = []
-    shuffledDeck
-    constructor() {
-        this.shuffledDeck  = new deckofcards().shuffleDeckOfCards()
-        // console.log(this.shuffledDeck)
+    constructor(deckOfCards) {
+        this.deck = deckOfCards
+        this.player = [[]]
+        this.dealer = []
+        this.totalDealerValue = 0
+        this.totalPlayerValue = [[0]]
+        this.dealingPhase()
+        this.showImages()
     }
 
     dealingPhase() {
         for (let i = 0; i < 2; i++) {
-            const playerHand = this.shuffledDeck.shift()
-            this.player.push(playerHand)
-            const dealerHand = this.shuffledDeck.shift()
-            this.dealer.push(dealerHand)
+            const playerCard = this.deck.dealCard()
+            /*/ PUSH IN FIRST PLAYER HAND (IN CASE OF SPLIT FUNCTION) /*/
+            this.player[0].push(playerCard)
+            const dealerCard = this.deck.dealCard()
+            this.dealer.push(dealerCard)
         }
-        console.log(this.dealer)
         console.log(this.player)
+        this.totalDealerValue = this.dealer.reduce((sum, card) => sum + card.value, 0)
+        this.totalPlayerValue = this.player[0].reduce((sum, card) => sum + card.value, 0)
+    }
+
+    showImages() {
+
     }
 }
 
