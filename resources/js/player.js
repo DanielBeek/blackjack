@@ -1,6 +1,7 @@
 class PlayerTurn  {
 
-    constructor(deckOfCards, initialDeal) {
+    constructor(deckOfCards, initialDeal, game) {
+        this.game = game
         this.deck = deckOfCards
         this.initialDeal = initialDeal
         this.hitButton = document.getElementById('hit')
@@ -13,14 +14,16 @@ class PlayerTurn  {
         this.split()
         this.activeHand = 0
         this.splitCase = false
-        this.currentTurn = true
     }
 
     hit() {
-        const hand = this.initialDeal.player[this.activeHand]
         this.hitButton.addEventListener('click', () => {
             const removedCard = this.deck.dealCard()
             this.initialDeal.player[this.activeHand].push(removedCard)
+            this.game.totalValue()
+            if (this.initialDeal.totalPlayerValue > 21) {
+                this.game.gameWinner = "dealer"
+            }
         })
     }
 
@@ -30,7 +33,11 @@ class PlayerTurn  {
                 this.activeHand += 1;
                 this.splitCase = false
             } else {
-
+                if (this.game.currentTurn === "player") {
+                    this.game.currentTurn = "dealer"
+                    console.log(this.game.currentTurn)
+                    this.game.dealerTurn.dealer()
+                }
             }
         })
     }
@@ -41,6 +48,9 @@ class PlayerTurn  {
                 if (hand.length === 2) {
                     const doubleDownCard = this.deck.dealCard()
                     hand.push(doubleDownCard)
+                }
+                if (this.initialDeal.totalPlayerValue > 21) {
+                    this.game.gameWinner = "dealer"
                 }
                 console.log(this.initialDeal.player)
             })
@@ -68,6 +78,7 @@ class PlayerTurn  {
                     /*/ DISABLE IF YOU DO NOT HAVE A SPLIT HAND /*/
                     this.splitButton.disabled
                 }
+            console.log(this.initialDeal.player)
         })
     }
 }

@@ -24,3 +24,8 @@
     font-family: mainstyle, sans-serif;
     font-size: 18px;
 }
+
+.betForm {
+    display: flex;
+    flex-direction: column;
+}
