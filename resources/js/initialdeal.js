@@ -1,8 +1,8 @@
 class InitialDeal {
 
-    constructor(deckOfCards, game) {
-        this.deckOfCards = deckOfCards
+    constructor(deckOfCards , game) {
         this.game = game
+        this.deckOfCards = deckOfCards
         this.player = [[]]
         this.dealer = []
         this.showImages()
@@ -17,8 +17,12 @@ class InitialDeal {
             this.dealer.push(dealerCard)
         }
         this.game.totalValue()
-        /*/ CHECK IF PLAYER WINS, LOSES OR TIES IN INITIALDEAL /*/
+        this.checkForBlackjack()
+    }
+
+    checkForBlackjack() {
         switch (true) {
+            /*/ CHECK IF PLAYER WINS, LOSES OR TIES IN INITIAL DEAL /*/
             case (this.game.totalDealerValue === 21 && this.game.totalPlayerValue[0] === 21):
                 this.game.gameWinner = "tie"
                 console.log(this.game.gameWinner)
@@ -33,6 +37,9 @@ class InitialDeal {
                 this.game.gameWinner = "player"
                 console.log(this.game.gameWinner)
                 this.game.gameOver()
+                break
+            default:
+                this.game.playerTurn.addEventListeners()
                 break
         }
     }

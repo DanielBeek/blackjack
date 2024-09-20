@@ -12,6 +12,9 @@
                     this.initialDeal.dealer.push(dealerCard)
                     console.log(this.initialDeal.dealer)
                     this.game.totalValue()
+                    if (this.game.totalDealerValue > 21) {
+                        console.log("Dealer lost: " + this.game.totalDealerValue)
+                    }
                 }
                     this.game.gameOver()
             }

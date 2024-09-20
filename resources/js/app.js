@@ -27,6 +27,7 @@ export class Game {
                 handValue += cardValue
             })
             this.totalPlayerValue[handIndex] = handValue;
+            console.log("Player: " + this.totalPlayerValue[handIndex])
         })
         let handValue = 0
         this.initialDeal.dealer.forEach((card) => {
@@ -34,6 +35,7 @@ export class Game {
             handValue += cardValue
         })
         this.totalDealerValue = handValue
+        console.log("Dealer: " + this.totalDealerValue)
     }
 
     startGame() {

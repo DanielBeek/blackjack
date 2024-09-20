@@ -3,8 +3,8 @@ class DeckOfCards {
     constructor() {
         this.suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
         this.name = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
-        // this.values = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
-        this.values = [11, 11, 11, 11, 10, 10, 10, 10, 10, 11, 10, 11, 10]
+        this.values = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+        // this.values = [11, 11, 11, 11, 10, 10, 10, 10, 10, 11, 10, 11, 10]
         this.deck = []
     }
 
